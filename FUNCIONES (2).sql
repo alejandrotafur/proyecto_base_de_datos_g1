@@ -1,0 +1,17 @@
+DELIMITER //
+CREATE FUNCTION calcular_horas(fecha_inicio DATETIME, fecha_fin DATETIME)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN TIMESTAMPDIFF(HOUR, fecha_inicio, fecha_fin);
+END //
+DELIMITER ;
+
+DELIMITER //
+CREATE FUNCTION total_a_pagar(horas INT, tarifa DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    RETURN horas * tarifa;
+END //
+DELIMITER ;
