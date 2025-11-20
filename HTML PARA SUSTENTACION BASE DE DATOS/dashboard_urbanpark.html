@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanPark | Dashboard</title>
+
+    <!-- Fuentes e íconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #eef3ff;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 38px;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: 0.2s;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            background: #f7f9ff;
+        }
+
+        .icon {
+            height: 55px;
+            width: 55px;
+            margin-bottom: 15px;
+            color: #4d6bfe;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        .badge {
+            background: #4d6bfe;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #4d6bfe;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Modelo de Base de Datos – UrbanPark</h1>
+
+    <div class="container">
+
+        <!-- Modulo Parqueaderos -->
+        <div class="card" onclick="location.href='parqueaderos.html'">
+            <i data-lucide="map-pin" class="icon"></i>
+            <div class="card-title">Parqueaderos</div>
+            <div class="card-desc">Gestión de sedes, ubicaciones y zonas de parqueo.</div>
+            <div class="badge">3 entidades</div>
+        </div>
+
+        <!-- Modulo Vehículos -->
+        <div class="card" onclick="location.href='vehiculos.html'">
+            <i data-lucide="car" class="icon"></i>
+            <div class="card-title">Vehículos</div>
+            <div class="card-desc">Control de tipos de vehículo y características.</div>
+            <div class="badge">4 entidades</div>
+        </div>
+
+        <!-- Modulo Reservas -->
+        <div class="card" onclick="location.href='reservas.html'">
+            <i data-lucide="calendar" class="icon"></i>
+            <div class="card-title">Reservas</div>
+            <div class="card-desc">Entradas, salidas y reserva de espacios.</div>
+            <div class="badge">4 entidades</div>
+        </div>
+
+        <!-- Modulo Facturación -->
+        <div class="card" onclick="location.href='facturacion.html'">
+            <i data-lucide="file-text" class="icon"></i>
+            <div class="card-title">Facturación</div>
+            <div class="card-desc">Tarifas, cálculos y registros de facturas.</div>
+            <div class="badge">5 entidades</div>
+        </div>
+
+        <!-- Modulo Seguridad -->
+        <div class="card" onclick="location.href='seguridad.html'">
+            <i data-lucide="lock" class="icon"></i>
+            <div class="card-title">Seguridad</div>
+            <div class="card-desc">Roles, permisos, autenticación y auditoría.</div>
+            <div class="badge">8 entidades</div>
+        </div>
+
+        <!-- Modulo Empleados -->
+        <div class="card" onclick="location.href='empleados.html'">
+            <i data-lucide="users" class="icon"></i>
+            <div class="card-title">Empleados</div>
+            <div class="card-desc">Gestión de usuarios del sistema y personal.</div>
+            <div class="badge">3 entidades</div>
+        </div>
+
+        <!-- Modulo Tarifas -->
+        <div class="card" onclick="location.href='tarifas.html'">
+            <i data-lucide="dollar-sign" class="icon"></i>
+            <div class="card-title">Tarifas</div>
+            <div class="card-desc">Configuración de tarifas por tipo de vehículo.</div>
+            <div class="badge">2 entidades</div>
+        </div>
+
+        <!-- Modulo Auditoría -->
+        <div class="card" onclick="location.href='auditoria.html'">
+            <i data-lucide="activity" class="icon"></i>
+            <div class="card-title">Auditoría</div>
+            <div class="card-desc">Histórico de acciones del sistema.</div>
+            <div class="badge">2 entidades</div>
+        </div>
+
+        <!-- Modulo Logs -->
+        <div class="card" onclick="location.href='logs.html'">
+            <i data-lucide="clipboard-list" class="icon"></i>
+            <div class="card-title">Logs</div>
+            <div class="card-desc">Registro de eventos técnicos del sistema.</div>
+            <div class="badge">1 entidad</div>
+        </div>
+
+        <!-- Modulo Notificaciones -->
+        <div class="card" onclick="location.href='notificaciones.html'">
+            <i data-lucide="bell" class="icon"></i>
+            <div class="card-title">Notificaciones</div>
+            <div class="card-desc">Mensajes automáticos y alertas.</div>
+            <div class="badge">2 entidades</div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2025 UrbanPark | Proyecto de Base de Datos MySQL
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
